@@ -1,7 +1,4 @@
 # knowledge
 Projeto Base de Conhecimento 
 Tecnologias Utilizadas:
-  NodeJs
-  MongoDB
-  PostgreSql
-  VueJs
+  NodeJs, MongoDB, PostgreSql, VueJs

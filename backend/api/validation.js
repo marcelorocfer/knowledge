@@ -1,5 +1,3 @@
-const { model } = require("mongoose");
-
 module.exports = app => {
     function existsOrError(value, msg) {
         if (!value) throw msg

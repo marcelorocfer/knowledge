@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <span>Copyright <strong>InfoTech</strong> © 2019 2020</span>
+        <span>Copyright <strong>InfoTech</strong> © 2019 - 2020</span>
     </footer>
 </template>
 

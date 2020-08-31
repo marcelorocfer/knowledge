@@ -31,7 +31,8 @@ const routes = [{
     }, {
         name: 'auth',
         path: '/auth',
-        component: Auth
+        component: Auth,
+        meta: { requiresAuth: true }
     }]
 
 const router = new VueRouter({
@@ -45,6 +46,15 @@ router.beforeEach((to, from, next) => {
     if (to.matched.some(record => record.meta.requiresAdmin)) {
         const user = JSON.parse(json)
         user && user.admin ? next() : next({ path: '/' })
+    } else {
+        next()
+    }
+
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+        const user = JSON.parse(json)
+        !user ? next() : next({
+            path: '/'
+        })
     } else {
         next()
     }
